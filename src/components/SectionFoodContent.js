@@ -1,13 +1,13 @@
 import ProductInfo from "./ProductInfo";
 
-function SectionContent(){
+function SectionContent(props){
+    const {products} = props;
     return (
         <div className="wraplist-products">
             <div className="listProduct-row listProduct-resize-1">
-                <ProductInfo></ProductInfo>
-                <ProductInfo></ProductInfo>
-                <ProductInfo></ProductInfo>
-                <ProductInfo></ProductInfo>
+                {
+                    products.map((item, index) => <ProductInfo product={item}></ProductInfo>)
+                }
             </div>
         </div>
     );

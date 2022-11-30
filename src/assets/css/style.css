@@ -3879,7 +3879,7 @@ main {
 }
 
 .product-loop .proloop-detail .proloop--price {
-    margin-top: auto;
+    /* margin-top: auto; */
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 14px;
@@ -13118,6 +13118,9 @@ table.table-cart tr td.item .ico-gift {
     text-transform: capitalize
 }
 
-.hidden{
+.hidden {
     display:none!important
+}
+p {
+    margin:0 0 10px
 }

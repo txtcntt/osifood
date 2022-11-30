@@ -1,7 +1,8 @@
 import BtnAddToCard from "./BtnAddToCard";
 
 
-function ProductInfo() {
+function ProductInfo(props) {
+    const { product } = props;
     return (
         <div className="col-md-2 col-sm-4 col-xs-4 product-loop" data-id="1088089427">
             <div className="product-inner product-resize fixheight" style={{ height: 358 }}>
@@ -9,20 +10,20 @@ function ProductInfo() {
                     <div className="gift product_gift_label hidden" data-id="1040451405">
                         <img className="lazyload" src="https://file.hstatic.net/1000308580/file/icon-gifbox_21127e78739a40a28f058e5e123d41b1.png" alt="icon quà tặng" />
                     </div>
-                    <div className="product--image image-resize" style={{height: 182}}>
+                    <div className="product--image image-resize" style={{ height: 182, maxWidth: 182 }}>
                         <div className="product--image__inner">
                             <div className="prod-img">
-                                <img className="img-loop lazyloaded" src="https://product.hstatic.net/200000459373/product/tai_xuong__9__e20bf99465594802829fb0178e95d85d_large.jpg" alt=" Cá hú tươi 500g " />
+                                <img className="img-loop lazyloaded" src={product.img} alt={product.name} />
                             </div>
                         </div>
                     </div>
-                    <a href="#" className="proloop-link  quickview-product" data-handle="/products/ca-hu-tuoi-song-bv-500g" title="Cá hú tươi 500g"></a>
+                    <a href="#" className="proloop-link  quickview-product" title={product.name}></a>
                 </div>
                 <div className="proloop-detail">
                     <p className="proloop--vendor"><a href="#">OsiFood</a></p>
-                    <h3><a href="#" className=" quickview-product " data-handle="/products/ca-hu-tuoi-song-bv-500g">Cá hú tươi 500g</a></h3>
+                    <h3><a href="#" className=" quickview-product">{product.name}</a></h3>
                     <p className="proloop--price">
-                        <span className="price">32,800₫</span>
+                        <span className="price">{product.price}</span>
                     </p>
                     <div className="proloop--review">
                         <div className="haravan-product-reviews-badge" data-id="1040451405">  </div>
